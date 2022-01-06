@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.calculs",
+  "appName": "calculs",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {}
+}

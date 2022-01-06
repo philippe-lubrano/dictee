@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+$widthScreen: 980px;
+$grey: #cacaca;
+$white: white;
+$mainColor: #755E1D;
+$blue: #1f2b54;
+$textColor: #bec4d8;
+
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Raleway';
+}
+
+.page {
+  position: relative;
+  display: block;
+  width: $widthScreen;
+  margin: 0 auto;
+}
+
+.buttons {
+  a.student {
+    min-height: 147px;
+  }
+
+  a {
+    display: block;
+    border-radius: 9px;
+    background-color: $blue;
+    padding: 20px 0;
+    margin: 0 30px 30px 0;
+    width: calc(#{$widthScreen} / 3 - 30px);
+    text-align: center;
+    cursor: pointer;
+    color: $textColor;
+    text-decoration: none;
+
+    &.validated {
+      background-color: $blue;
+    }
+
+    &.presented {
+      background-color: grey;
+    }
+
+    &.white-belt {
+      background-color: white;
+      color: black;
+    }
+
+    &.yellow-belt {
+      background-color: yellow;
+      color: black;
+    }
+
+    &.orange-belt {
+      background-color: orange;
+      color: white;
+    }
+
+    &.green-belt {
+      background-color: #048E47;
+      color: white;
+    }
+
+    &.complements-belt {
+      background-color: #ff8d00;
+      color: white;
+    }
+
+    .niveau {
+      width: 53px;
+      text-align: center;
+    }
+
+    .commentaire {
+      max-width: 133px;
+    }
+
+    input::placeholder {
+      color: $grey;
+    }
+  }
+}
+
+.global_dictation.playing .text.blanche { background-color: white; }
+.global_dictation.playing .text.jaune { background-color: yellow; }
+.global_dictation.playing .illustration { opacity: unset; }
+
+.green {
+  color: green;
+}
+
+#audio {
+  display: none;
+}
+
+.global_dictation {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+
+  .illustration {
+    width: 220px;
+    height: auto;
+    position: relative;
+  }
+
+  .text {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.blanche, &.jaune {
+      background-color: #ababab;
+    }
+  }
+
+  .illustration {
+    opacity: 0.4;
+  }
+
+  .play_button {
+    position: absolute;
+    width: 100px;
+    cursor: pointer;
+  }
+}
+
+.title {
+  .incorrect {
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: red;
+    text-underline-offset: 8px;
+  }
+
+  .incomplete {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: blue;
+    text-underline-offset: 8px;
+  }
+}
+
+.response {
+  display: block;
+  width: 90%;
+  margin: 16px auto 0;
+  height: 100px;
+  font-size: 40px;
+  padding: 16px;
+  text-align: center;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+
+  .lines {
+    width: calc(100% / 3);
+
+    .conjugation {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 16px 0 0 16px;
+      font-size: 20px;
+      text-align: center;
+
+      input {
+        width: 63%;
+        margin-left: 16px;
+        font-size: 30px;
+        padding: 8px;
+      }
+    }
+  }
+
+  .imparfait {
+    .conjugation {
+      margin: 16px 0 0 0;
+    }
+  }
+}
+
+.submit {
+  display: block;
+  margin: 16px auto;
+  border-radius: 9px;
+  background-color: #1f2b54;
+  padding: 20px 0;
+  width: 220px;
+  text-align: center;
+  cursor: pointer;
+  color: #bec4d8;
+  text-decoration: none;
+}
+
+.validate, .buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin-top: 16px;
+}
+
+.validate {
+  border-radius: 9px;
+  background-color: $blue;
+  text-align: center;
+  cursor: pointer;
+  color: $textColor;
+  text-decoration: none;
+  height: 50px;
+  margin: 0 0 20px 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 16px;
+
+  &.answer {
+    font-size: 40px;
+  }
+
+  &.green {
+    margin-top: 32px;
+  }
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.student-list {
+  display: block;
+
+  .title {
+    margin-bottom: 20px;
+  }
+}
+
+.menu {
+  list-style: none;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 20px 0;
+  border-bottom: 1px solid $mainColor;
+
+  a {
+    margin-right: 20px;
+    color: $mainColor;
+    text-decoration: none;
+
+    &.last {
+      margin-right: 0;
+    }
+  }
+}
+
+.search {
+  width: 100%;
+  height: 30px;
+  margin-top: 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+
+  span {
+    background-color: black;
+    color: white;
+    width: 150px;
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 35px;
+    cursor: pointer;
+  }
+
+  .home {
+    margin-left: 16px;
+  }
+}
+
+
+.calculation {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+
+  .several-operands {
+    flex-wrap: wrap;
+  }
+
+  .tens-units {
+    display: flex;
+    align-items: center;
+    font-size: 70px;
+  }
+
+  div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .response {
+    margin-left: 16px;
+    height: 100px;
+    width: 67px;
+    font-size: 60px;
+    text-align: center;
+  }
+
+  button {
+    margin-left: 5px;
+  }
+}
+
+.operator {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+body {
+  background-color: #ededed;
+}
+
+@media screen and (max-width: $widthScreen - 1) {
+  .page {
+    width: 90%;
+  }
+
+  .buttons {
+    a {
+      width: 48%;
+      margin-right: 10px;
+
+      &.pair {
+        margin-right: 0;
+      }
+    }
+  }
+}
